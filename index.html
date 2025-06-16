@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,31 +6,40 @@
   <title>The AM Love Story</title>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Open+Sans&display=swap" rel="stylesheet">
   <style>
-    body {
+    html, body {
       margin: 0;
+      padding: 0;
+      height: 100vh;
+      width: 100vw;
       font-family: 'Open Sans', sans-serif;
       color: #333;
       background: #fffaf5;
+      overflow-x: hidden;
+    }
+    body {
+      display: flex;
+      flex-direction: column;
     }
     header {
       background: linear-gradient(to bottom right, #ffd1dc, #f6e3b4);
       color: #4b2e2e;
       text-align: center;
-      padding: 80px 20px 40px;
+      padding: 10vh 5vw 5vh;
     }
     header h1 {
       font-family: 'Playfair Display', serif;
-      font-size: 48px;
-      margin-bottom: 10px;
+      font-size: 5vw;
+      margin: 0;
     }
     header p {
-      font-size: 20px;
-      margin: 0;
+      font-size: 2vw;
+      margin: 10px 0 0;
     }
     nav {
       background: #fff;
       display: flex;
       justify-content: center;
+      flex-wrap: wrap;
       gap: 30px;
       padding: 10px;
       box-shadow: 0 2px 5px rgba(0,0,0,0.05);
@@ -40,32 +48,62 @@
       text-decoration: none;
       color: #a67943;
       font-weight: bold;
+      font-size: 1.2vw;
     }
     section {
-      padding: 60px 20px;
+      padding: 5vh 5vw;
       text-align: center;
     }
     .save-the-date, .registry, .our-story {
-      max-width: 800px;
+      max-width: 900px;
       margin: 0 auto;
     }
     h2 {
       font-family: 'Playfair Display', serif;
-      font-size: 36px;
+      font-size: 3.5vw;
       color: #a67943;
       margin-bottom: 20px;
     }
-    .save-the-date img, .our-story img {
-      max-width: 100%;
+    img {
+      width: 100%;
+      max-height: 50vh;
+      object-fit: cover;
       border-radius: 20px;
       margin-top: 20px;
+    }
+    .rsvp-button {
+      display: inline-block;
+      margin-top: 30px;
+      padding: 15px 30px;
+      background-color: #a67943;
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 30px;
+      transition: background-color 0.3s;
+    }
+    .rsvp-button:hover {
+      background-color: #8d5e33;
     }
     footer {
       background: #f6e3b4;
       text-align: center;
       padding: 20px;
-      font-size: 14px;
+      font-size: 1.2vw;
       color: #4b2e2e;
+      margin-top: auto;
+    }
+
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 8vw;
+      }
+      header p, nav a, footer {
+        font-size: 3.5vw;
+      }
+      h2 {
+        font-size: 5.5vw;
+      }
     }
   </style>
 </head>
@@ -74,6 +112,7 @@
     <h1>Olamide & Ayokunnumi</h1>
     <p>#TheAMLovestory</p>
   </header>
+
   <nav>
     <a href="#save">Save the Date</a>
     <a href="#story">Our Story</a>
@@ -83,13 +122,14 @@
   <section class="save-the-date" id="save">
     <h2>Save the Date</h2>
     <p>Join us in celebrating our wedding on <strong>October 15 & 16, 2025</strong></p>
-    <img src="https://source.unsplash.com/800x500/?wedding,couple" alt="Save the Date Photo">
+    <img src="save-the-date.jpg" alt="Olamide and Ayokunnumi Save the Date">
+    <a href="https://forms.gle/aSnMkGfTxiNW7CYh9" class="rsvp-button" target="_blank">RSVP here</a>
   </section>
 
   <section class="our-story" id="story">
     <h2>Our Story</h2>
     <p>From friendship to forever — our journey has been one of faith, laughter, and deep love. We can’t wait to begin this new chapter together with you by our side.</p>
-    <img src="https://source.unsplash.com/800x500/?love,romance" alt="Our Story Photo">
+    <img src="https://source.unsplash.com/800x500/?wedding,rings" alt="Two Wedding Rings">
   </section>
 
   <section class="registry" id="registry">
